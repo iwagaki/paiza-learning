@@ -9,16 +9,15 @@ import (
 )
 
 func main() {
-	var scanner = bufio.NewScanner(os.Stdin)
+	scanner := bufio.NewScanner(os.Stdin)
 
 	scanner.Scan()
 	count, _ := strconv.Atoi(scanner.Text())
-	var n []int
+	n := make([]int, count)
 
 	for i := 0; i < count; i++ {
 		scanner.Scan()
-		m, _ := strconv.Atoi(scanner.Text())
-		n = append(n, m)
+		n[i], _ = strconv.Atoi(scanner.Text())
 	}
 
 	sort.Sort(sort.IntSlice(n))

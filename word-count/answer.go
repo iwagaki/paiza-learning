@@ -7,11 +7,11 @@ import (
 )
 
 func main() {
-	var scanner = bufio.NewScanner(os.Stdin)
+	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Split(bufio.ScanWords)
 
 	count := map[string]int{}
-	var word []string
+	word := []string{}
 
 	for scanner.Scan() {
 		key := scanner.Text()
