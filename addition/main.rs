@@ -1,4 +1,3 @@
-
 fn main() {
     use std::io;
     let mut line = String::new();
